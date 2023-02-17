@@ -144,6 +144,7 @@ func (c *Coordinator) Review(args *ReviewArgs, reply *ReviewReply) error {
 		return nil
 	}
 	log.Printf("worker %d has not finished task %d\n", args.WID, args.TID)
+	c.queue.Enqueue(item{args.TID, c.tasks[args.TID].File}) // recover in queue
 	return errors.New("coordinator: review failed")
 }
 
