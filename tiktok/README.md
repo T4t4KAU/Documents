@@ -1,5 +1,7 @@
 # Kitex实践：用户管理服务
 
+代码地址：https://github.com/T4t4KAU/Documents/tree/main/tiktok
+
 本文讲述如何使用kitex开发一个用户管理微服务，负责用户的登录与注册
 
 安装kitex: `go install github.com/cloudwego/kitex/tool/cmd/kitex@latest`
@@ -528,7 +530,7 @@ tree .
 
 先运行上述的用户服务，再运行API网关，如下是控制台信息
 
-```powershell
+```
 2023/07/31 14:26:10 debug logging disabled
 2023/07/31 14:26:10 debug logging disabled
 2023/07/31 14:26:10.262669 engine.go:617: [Debug] HERTZ: Method=POST   absolutePath=/douyin/user/register     --> handlerName=tiktok/cmd/api/handlers.Register (num=2 handlers)
