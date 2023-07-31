@@ -44,7 +44,7 @@ service UserService {
 }
 ```
 
-代码生成：`kitex -module tiktok -service a.b.c idl/user.thrift`
+代码生成：`kitex -module tiktok -service a.b.c idl/user.thrift` 
 
 随后执行`go mod tidy`安装依赖
 
@@ -603,3 +603,15 @@ func TestUserLogin(t *testing.T) {
 ```
 
 运行成功：`{"status_code":0,"status_msg":"Success","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA4NzE1MDMsIm9yaWdfaWF0IjoxNjkwNzg1MTAzLCJ1c2VyX2lkIjoxMDI2fQ.JBU8j6IzcVZTx6xrnIrPJSVsGfvGDAxXlGguKBrRKUc"}`
+
+## 运行
+
+使用目录下的docker-compose配置docker容器，可能要修改pkg/constants包下相关配置
+
+打开两个终端 分别运行cmd/user目录下的main.go和cmd目录下的main.go
+
+```powershell
+go run main.go
+go run user/main.go
+```
+
