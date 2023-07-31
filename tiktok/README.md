@@ -4,7 +4,7 @@
 
 安装kitex: `go install github.com/cloudwego/kitex/tool/cmd/kitex@latest`
 
-安装thrift-go:``go install github.com/cloudwego/thriftgo@latest`
+安装thrift-go:`go install github.com/cloudwego/thriftgo@latest`
 
 ## IDL代码生成
 
